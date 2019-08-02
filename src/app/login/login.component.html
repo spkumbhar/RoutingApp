@@ -1,0 +1,14 @@
+<div class="row mt-2">
+  <div class="col-md-12">
+
+    <input type="text" #uName placeholder="Enter Your username" class="mr-2">
+    <input type="text" #passWord placeholder="Password">
+
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" value="Login" class="btn btn-info mt-2 ml-2" (click)="onLogin(uName.value,passWord.value)">
+
+    </div>
+  </div>
+</div>
