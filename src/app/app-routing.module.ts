@@ -9,7 +9,8 @@ import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent },
-  {path: 'dash', component: DashComponent},
+  {path: 'dash/:usId', component: DashComponent},
+  {path:  'dash', redirectTo: 'dash/234', pathMatch: 'full'},
   {path: 'error', component: ErrorComponent},
   {path: '**', component: NfComponent }
 ];

@@ -17,10 +17,7 @@ export class LoginComponent implements OnInit {
 
   onLogin(name: string, pass: string) {
     // tslint:disable-next-line: triple-equals
-    if ( name == 'sonali' && pass == 'password') {
-    this.router.navigate(['dash']);
-    } else {
-      this.router.navigate(['error']);
-    }
+        this.router.navigate(['dash', name]);
+
   }
 }
