@@ -1,0 +1,15 @@
+<form class=card novalidate (ngSubmit)="mySub()" [formGroup]="frmGrp">
+    <div><h5>Data driven forms</h5></div>
+    <div><input type="text" placeholder="Username" formControlName="usNm" ></div>
+    <p class="text-muted">Username</p>
+    <div><input type="text" placeholder="Email" formControlName="eml"></div>
+    <p class="text-muted">email</p>
+    <p class="text-muted">Valid email</p>
+    <div><input type="text" placeholder="Password" formControlName="pass" ></div>
+    <p class="text-muted">Password</p>
+    <div><input type="text" placeholder="confirm password" ></div>
+    <p class="text-muted">Cofirm password</p>
+    <div>
+      <input type="submit" value=Submit class="btn btn-info"  >
+    </div>
+  </form>

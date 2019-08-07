@@ -10,6 +10,7 @@ import { unwrapResolvedMetadata } from '@angular/compiler';
 export class DashComponent implements OnInit {
 
   usId: string;
+  lastName: string;
   constructor(
     private actRt: ActivatedRoute
   ) { }
@@ -19,7 +20,14 @@ export class DashComponent implements OnInit {
       prm => this.usId = prm.usId
 
 
-    )
+    );
+    this.actRt.queryParams.subscribe(
+      prms => {
+      console.log(prms);
+      this.usId = prms.usId;
+      this.lastName = prms.Lastname;
+      }
+    );
   }
 
 }

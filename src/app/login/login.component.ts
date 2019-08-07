@@ -15,9 +15,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLogin(name: string, pass: string) {
+  onLogin(name: string, password: string, lastname: string) {
     // tslint:disable-next-line: triple-equals
-        this.router.navigate(['dash', name]);
+        this.router.navigate(['dash', name], {
+          queryParams: {
+          usId : name,
+          Lastname : lastname
+        }
+        });
 
   }
 }

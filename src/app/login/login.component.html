@@ -1,14 +1,15 @@
 <div class="row mt-2">
   <div class="col-md-12">
 
-    <input type="text" #uName placeholder="Enter Your username" class="mr-2">
-    <input type="text" #passWord placeholder="Password">
+    <input type="text" #uName placeholder="Enter Your username" class="mr-2"><br>
+    <input type="text" #passWord placeholder="Password" class="mr-2"><br>
+    <input type="text" #lastName placeholder="lastname">
 
   </div>
   <div class="row">
     <div class="col-md-12">
-      <input type="button" value="Login" class="btn btn-info mt-2 ml-2" (click)="onLogin(uName.value,passWord.value)">
-      <a [routerLink]="['dash']" >Go to dash board</a>
+      <input type="button" value="Login" class="btn btn-info mt-2 ml-2" (click)="onLogin(uName.value,passWord.value,lastName.value)">
+      <br><a [routerLink]="['dash']" [queryParams] = "{user: 'sonali',lastname:'kumbhar'}">Go to dash board</a>
     </div>
   </div>
 </div>

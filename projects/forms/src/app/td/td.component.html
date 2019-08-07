@@ -1,0 +1,17 @@
+<form class=card #myFrm="ngForm" (ngSubmit)="mySubmit(myFrm)">
+  <div>
+    <h5>Template driven forms</h5>
+  </div>
+  <div><input type="text"  placeholder="Username" name="usNm" required ngModel></div>
+  <p class="text-muted">Username</p>
+  <div><input type="text" placeholder="Email" name="eml" required ngModel></div>
+  <p class="text-muted">email</p>
+  <p class="text-muted">Valid email</p>
+  <div><input type="text" placeholder="Password" name="pass" required ngModel></div>
+  <p class="text-muted">Password</p>
+  <div><input type="text" placeholder="confirm password"></div>
+  <p class="text-muted">Cofirm password</p>
+  <div>
+    <input type="submit" value=Submit class="btn btn-info">
+  </div>
+</form>
