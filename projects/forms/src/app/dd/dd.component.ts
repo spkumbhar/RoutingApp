@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup } from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { format } from 'util';
 
 @Component({
@@ -16,9 +16,9 @@ export class DdComponent implements OnInit {
 
   ngOnInit() {
       this.frmGrp = this.fb.group({
-        usNm : this.fb.control(''),
-        eml : this.fb.control(''),
-        pass : this.fb.control('')
+        usNm : this.fb.control('', Validators.required),
+        eml : this.fb.control('', Validators.email),
+        pass : this.fb.control('', Validators.required)
 
     })
 

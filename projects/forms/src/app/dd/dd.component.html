@@ -1,14 +1,18 @@
 <form class=card novalidate (ngSubmit)="mySub()" [formGroup]="frmGrp">
     <div><h5>Data driven forms</h5></div>
-    <div><input type="text" placeholder="Username" formControlName="usNm" ></div>
-    <p class="text-muted">Username</p>
-    <div><input type="text" placeholder="Email" formControlName="eml"></div>
-    <p class="text-muted">email</p>
-    <p class="text-muted">Valid email</p>
-    <div><input type="text" placeholder="Password" formControlName="pass" ></div>
-    <p class="text-muted">Password</p>
-    <div><input type="text" placeholder="confirm password" ></div>
-    <p class="text-muted">Cofirm password</p>
+    <div>
+      <input type="text" placeholder="Username" formControlName="usNm" ></div>
+    <p *ngIf="frmGrp.controls.usNm.errors?.required" class ="alert alert-danger">Username required</p>
+    <div>
+      <input type="text" placeholder="Email" formControlName="eml"></div>
+    <p *ngIf="frmGrp.controls.eml.errors?.required" class ="alert alert-danger">email required</p>
+    <p *ngIf="frmGrp.controls.eml.errors?.email" class ="alert alert-danger"> Enter Valid email</p>
+    <div>
+      <input type="text" placeholder="Password" formControlName="pass" ></div>
+    <p *ngIf="frmGrp.controls.pass.Valid" class ="alert alert-danger">Password</p>
+    <div>
+      <input type="text" placeholder="confirm password" ></div>
+    <p *ngIf="frmGrp.controls.pass.errors?.required" class="alert alert-danger">Cofirm password</p>
     <div>
       <input type="submit" value=Submit class="btn btn-info"  >
     </div>
